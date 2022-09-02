@@ -5,7 +5,7 @@ async function run() {
 
   try {
 
-    const repository = core.getInput('repo');
+    const repository = core.getInput('repository');
     console.log(`Get Repository: ${repository}`);
 
     const milestoneName = core.getInput('name');
