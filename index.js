@@ -1,25 +1,31 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-try {
+async function run() {
 
-  const repository = core.getInput('repo');
-  console.log(`Get Repository: ${repository}`);
+  try {
 
-  const milestoneName = core.getInput('name');
-  console.log(`Get Milestone Name: ${milestoneName}`);
+    const repository = core.getInput('repo');
+    console.log(`Get Repository: ${repository}`);
 
-  const token = core.getInput('token');
-  const octokit = github.getOctokit(token);
+    const milestoneName = core.getInput('name');
+    console.log(`Get Milestone Name: ${milestoneName}`);
 
-  const response = await octokit.request(`GET /repos/${repository}/milestones`);
-  const data = response.data;
+    const token = core.getInput('token');
+    const octokit = github.getOctokit(token);
 
-  console.log(data);
-  core.setOutput('data', data);
+    const response = await octokit.request(`GET /repos/${repository}/milestones`);
+    const data = response.data;
 
-} catch (error) {
+    console.log(data);
+    core.setOutput('data', data);
 
-  core.setFailed(error.message);
-  
+  } catch (error) {
+
+    core.setFailed(error.message);
+
+  }
+
 }
+
+run();
