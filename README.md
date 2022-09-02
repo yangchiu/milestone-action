@@ -24,7 +24,7 @@ The retrieved milestone object.
 
 ## Example usage
 
-uses: yangchiu/milestone-action@v1.0.0
+uses: yangchiu/milestone-action@v1
 with:
   token: ${{ github.token }}
   repository: ${{github.repository }}
