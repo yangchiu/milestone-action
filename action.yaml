@@ -10,6 +10,7 @@ inputs:
   name:
     description: 'Name of milestone to be retrieved'
     required: false
+    default: ''
 outputs:
   milestine:
     description: 'The retrieved milestone object'
