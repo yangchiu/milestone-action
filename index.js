@@ -21,11 +21,11 @@ async function run() {
       if (milestone.title === milestoneName) {
         console.log(`Found ${inspect(milestone)} for ${milestoneName}`);
         core.setOutput('data', milestone);
-        break;
+        return;
       }
     }
 
-    throw Error(`unable to find milestone ${milestoneName}}`)
+    throw Error(`unable to find milestone ${milestoneName}`)
 
   } catch (error) {
 
