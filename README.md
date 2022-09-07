@@ -12,9 +12,9 @@ Get milestone object from milestone name
 
 **Required** Github repository to be retrieved.
 
-## `name`
+## `milestone_name`
 
-Name of the milestone to be retrieved.
+**Required** Name of the milestone to be retrieved.
 
 ## Outputs
 
@@ -24,7 +24,8 @@ The retrieved milestone object.
 
 ## Example usage
 
-uses: yangchiu/milestone-action@v1
+uses: yangchiu/milestone-action@master
 with:
   token: ${{ github.token }}
-  repository: ${{github.repository }}
+  repository: ${{ github.repository }}
+  milestone_name: v1.4.0
