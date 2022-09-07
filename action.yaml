@@ -7,12 +7,11 @@ inputs:
   repository:
     description: 'Github Repository to be retrieved'
     required: true
-  name:
+  milestone_name:
     description: 'Name of milestone to be retrieved'
-    required: false
-    default: ''
+    required: true
 outputs:
-  milestine:
+  data:
     description: 'The retrieved milestone object'
 runs:
   using: 'node16'
