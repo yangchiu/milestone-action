@@ -1,6 +1,6 @@
 # Get milestone javascript action
 
-Get milestone object from milestone name
+Get milestone object from milestone name, if the milestone doesn't exist, it would be created automatically. 
 
 ## Inputs
 
